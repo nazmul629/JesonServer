@@ -1,0 +1,39 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=, initial-scale=1.0">
+     <title>Document</title>
+ </head>
+ <body>
+     
+
+  <div id="output"></div>
+  
+  <h1 class="first"></h1>
+
+    <div id="fn"> </div>
+
+
+
+    <script src="  https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.min.js"></script>
+    <script>
+      
+        var peoples = []
+
+        for(var i=0;i<10;i++){
+            var obj={};
+            obj.id=i+1
+            obj.name=faker.name.findName();
+            obj.email=faker.internet.email();
+            peoples.push(obj)
+        }
+
+       
+          document.querySelector("#output").innerHTML=JSON.stringify(peoples)
+        
+
+    </script>
+    <script src="main.js"></script>
+ </body>
+ </html>
